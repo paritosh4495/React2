@@ -6,14 +6,20 @@ import {baseUrl } from '../shared/baseUrl';
 
 function RenderMenuItem ({dish, onClick}) {
 	return (
-		<Card>
-			<Link to={`/menu/${dish.id}`}>
-				<CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
-					<CardImgOverlay>
-					<CardTitle heading>{dish.name}</CardTitle>
-				</CardImgOverlay>
-			</Link>
-		</Card>
+			<div>
+				
+				<Card>
+					<Link to={`/menu/${dish.id}`}>
+						<CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
+							<CardImgOverlay>
+							<CardTitle heading>{dish.name}</CardTitle>
+						</CardImgOverlay>
+					</Link>
+				</Card>
+
+		
+			</div>
+				
 	
 	);
 }
