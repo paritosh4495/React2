@@ -20,8 +20,8 @@ function RenderCard ({item, isLoading, errMess}) {
                 transformProps = {{
                     exitTransform: 'scale(0.5) translateY(-50%)'
                 }} >
-            <Card className="">
-                <CardImg src={ baseUrl + item.image} alt={item.name}/>
+            <Card>
+                <CardImg src={baseUrl + item.image} alt={item.name}/>
                 <CardBody>
                     <CardTitle>{item.name}</CardTitle>
                         {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle>: null}
@@ -50,7 +50,10 @@ function Home (props) {
                     />
                 </div>
                 <div className="col-12 col-md m-1">
-                    <RenderCard item={props.leader}/>
+                    <RenderCard item={props.leader}
+                    isLoading={props.leaderLoading}
+                    errMess={props.leaderErrMess}
+                    />
                 </div>
 
             </div>
